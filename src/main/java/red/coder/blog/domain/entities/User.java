@@ -1,4 +1,4 @@
-package red.coder.blog.domain;
+package red.coder.blog.domain.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -38,5 +38,17 @@ public class User {
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
-
 }
+
+// @Override
+// public boolean equals(Object o) {
+//     if (this == o) return true;
+//     if (!(o instanceof User)) return false;
+//     User user = (User) o;
+//     return id != null && id.equals(user.id);
+// }
+
+// @Override
+// public int hashCode() {
+//     return Objects.hash(id);
+// }
