@@ -1,13 +1,17 @@
 package red.coder.blog.domain.entities;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,17 +42,21 @@ public class User {
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
+
+    @Builder.Default
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Post> posts = new ArrayList<>();
 }
 
 // @Override
 // public boolean equals(Object o) {
-//     if (this == o) return true;
-//     if (!(o instanceof User)) return false;
-//     User user = (User) o;
-//     return id != null && id.equals(user.id);
+// if (this == o) return true;
+// if (!(o instanceof User)) return false;
+// User user = (User) o;
+// return id != null && id.equals(user.id);
 // }
 
 // @Override
 // public int hashCode() {
-//     return Objects.hash(id);
+// return Objects.hash(id);
 // }
