@@ -1,6 +1,4 @@
-package red.coder.api.dto.request;
-
-import java.util.UUID;
+package red.coder.blog.api.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,6 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategoryRequest {
-    private UUID id;
     private String name;
 }

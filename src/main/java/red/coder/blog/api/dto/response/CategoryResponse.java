@@ -1,4 +1,4 @@
-package red.coder.api.dto.response;
+package red.coder.blog.api.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
