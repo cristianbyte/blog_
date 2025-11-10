@@ -2,6 +2,6 @@ package red.coder.blog.infrastructure.abstract_services;
 
 import red.coder.blog.infrastructure.abstract_services.generic.ReadAllService;
 
-public interface ICategoryService extends
+public interface ITagService extends
         ReadAllService<String> {
 }

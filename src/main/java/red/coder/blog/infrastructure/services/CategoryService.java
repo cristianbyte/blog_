@@ -20,8 +20,8 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public List<String> findAll() {
-        List<Category> categories = categoryRepo.findAll();
-        return categories.stream()
+        return categoryRepo.findAll()
+                .stream()
                 .map(Category::getName)
                 .toList();
     }
